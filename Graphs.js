@@ -37,6 +37,7 @@ class Graph {
 
     addVertex(node) {
         this.adjacentList[node] = []
+        this.numberOfNodes++
         return this.adjacentList
     }
 
@@ -46,9 +47,9 @@ class Graph {
             this.adjacentList[node1].push(node2)
             this.adjacentList[node2].push(node1)
             return this.adjacentList
-        } else {
-            return 'one of the nodes not exist'
-        } 
+        }
+        
+        return 'one of the nodes not exist'
     }
 
     showConnections() {
